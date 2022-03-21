@@ -1,0 +1,9 @@
+@import './variables.scss';
+@import './placeholders.scss';
+@import './placeholders.scss';
+
+@mixin text-bg($direction, $color) {
+    @each $color in $gradient-yellow {
+        background-image: linear-gradient($direction, $color);
+    }
+}
