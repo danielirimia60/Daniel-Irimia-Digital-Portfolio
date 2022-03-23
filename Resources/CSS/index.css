@@ -4,7 +4,7 @@
   overflow-x: hidden;
 }
 
-header .grid-container, header {
+footer, main .intro-title, main, header .grid-container, header {
   margin: 0 auto;
 }
 
@@ -13,9 +13,36 @@ header .grid-container, header {
   height: 100vh;
 }
 
+footer, main .outro-content, main .intro-content1,
+main .intro-content2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
 header .grid-container .navigation-container .navigation-links .link a {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
+}
+
+header .grid-container .title-container .title-r1,
+header .grid-container .title-container .title-r3,
+header .grid-container .title-container .title-r2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+main .intro-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+header .grid-container .title-container .title-r1,
+header .grid-container .title-container .title-r3,
+header .grid-container .title-container .title-r2 {
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 8rem;
 }
 
 * {
@@ -24,7 +51,7 @@ header .grid-container .navigation-container .navigation-links .link a {
   overflow-x: hidden;
 }
 
-header .grid-container, header {
+footer, main .intro-title, main, header .grid-container, header {
   margin: 0 auto;
 }
 
@@ -33,9 +60,36 @@ header .grid-container, header {
   height: 100vh;
 }
 
+footer, main .outro-content, main .intro-content1,
+main .intro-content2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
 header .grid-container .navigation-container .navigation-links .link a {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
+}
+
+header .grid-container .title-container .title-r1,
+header .grid-container .title-container .title-r3,
+header .grid-container .title-container .title-r2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+
+main .intro-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+header .grid-container .title-container .title-r1,
+header .grid-container .title-container .title-r3,
+header .grid-container .title-container .title-r2 {
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 8rem;
 }
 
 * {
@@ -44,7 +98,7 @@ header .grid-container .navigation-container .navigation-links .link a {
   overflow-x: hidden;
 }
 
-header .grid-container, header {
+footer, main .intro-title, main, header .grid-container, header {
   margin: 0 auto;
 }
 
@@ -53,29 +107,49 @@ header .grid-container, header {
   height: 100vh;
 }
 
+footer, main .outro-content, main .intro-content1,
+main .intro-content2 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
 header .grid-container .navigation-container .navigation-links .link a {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-header .grid-container, header {
-  margin: 0 auto;
-}
-
-header .grid-container, header {
-  width: 100%;
-  height: 100vh;
-}
-
-header .grid-container .navigation-container .navigation-links .link a {
+header .grid-container .title-container .title-r1,
+header .grid-container .title-container .title-r3,
+header .grid-container .title-container .title-r2 {
   font-family: "Raleway", sans-serif;
-  font-weight: 600;
+  font-weight: 700;
+}
+
+main .intro-title {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+
+header .grid-container .title-container .title-r1,
+header .grid-container .title-container .title-r3,
+header .grid-container .title-container .title-r2 {
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 8rem;
+}
+
+body::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track {
+  border-radius: 20px;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #D4CC00;
+  border-radius: 20px;
 }
 
 header .grid-container {
@@ -100,7 +174,7 @@ header .grid-container .filter {
   height: 100vh;
   position: relative;
   z-index: 0;
-  opacity: 0.9;
+  opacity: 1;
 }
 header .grid-container .navigation-container {
   grid-area: 1/1;
@@ -115,6 +189,12 @@ header .grid-container .navigation-container {
   position: relative;
   z-index: 2;
 }
+header .grid-container .navigation-container .logo-container {
+  width: 6em;
+}
+header .grid-container .navigation-container .logo-container img {
+  width: 100%;
+}
 header .grid-container .navigation-container nav {
   display: flex;
   justify-content: space-between;
@@ -123,15 +203,16 @@ header .grid-container .navigation-container nav {
 }
 header .grid-container .navigation-container .navigation-links {
   display: flex;
-  margin-left: 2em;
   list-style: none;
 }
 header .grid-container .navigation-container .navigation-links .link a {
   text-decoration: none;
-  padding: 0.5rem;
+  padding: 0.7rem;
   color: #FFFFFF;
   font-size: 1.2rem;
-  cursor: pointer;
+}
+header .grid-container .navigation-container .navigation-links .link a:hover {
+  color: #D4CC00;
 }
 header .grid-container .navigation-container .social-media {
   display: flex;
@@ -142,11 +223,27 @@ header .grid-container .navigation-container .social-media img {
   padding: 0.7em;
   filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
 }
+header .grid-container .navigation-container .social-media img:hover {
+  filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
+  transform: scale(0.95);
+}
 header .grid-container .title-container {
   grid-area: 1/1;
   position: relative;
   z-index: 2;
   align-self: center;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  margin-top: 12%;
+}
+header .grid-container .title-container .title-r1, header .grid-container .title-container .title-r3 {
+  background-image: linear-gradient(90deg, #665C05, #CDB905, #FAFF05, #BDC105, #656705);
+  margin-left: 6rem;
+}
+header .grid-container .title-container .title-r2 {
+  background-image: linear-gradient(90deg, #CFCFCF, #E8E8E8, #FFFFFF, #E7E7E7, #C5C5C5);
+  margin-left: 2rem;
 }
 header .grid-container .arrow-down {
   grid-area: 1/1;
@@ -159,4 +256,88 @@ header .grid-container .arrow-down {
   align-self: flex-end;
   justify-self: center;
   padding-bottom: 0.5em;
+  opacity: 0.7;
+}
+
+main {
+  color: #CFCFCF;
+  position: relative;
+  height: 480vh;
+}
+main span {
+  color: #BDC105;
+}
+main .intro-title {
+  font-size: 9rem;
+  max-width: 70%;
+  margin-top: 10%;
+}
+main .intro-content1,
+main .intro-content2 {
+  font-size: 2.25rem;
+  width: 40%;
+}
+main .intro-content1 {
+  position: absolute;
+  right: 10px;
+  top: 90rem;
+}
+main .intro-content2 {
+  position: absolute;
+  left: 20px;
+  top: 140rem;
+}
+main .outro-content {
+  font-size: 2.25rem;
+  position: absolute;
+  right: 10px;
+  top: 190rem;
+  padding: 0.2rem;
+}
+main .outro-content a {
+  text-decoration: none;
+  color: inherit;
+}
+main .outro-content ul {
+  padding-bottom: 1em;
+}
+main .outro-content img {
+  filter: invert(89%) sepia(56%) saturate(7480%) hue-rotate(353deg) brightness(82%) contrast(105%);
+  width: 0.5em;
+  margin-right: 0.5em;
+}
+
+footer {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2%;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #D4CC00;
+}
+footer .footer-content {
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  display: flex;
+  gap: 4em;
+  justify-content: center;
+  padding-top: 1.2em;
+  padding-bottom: 1.2em;
+}
+footer .footer-content .left-column {
+  width: 15%;
+}
+footer .footer-content .middle-column,
+footer .footer-content .right-column {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer-logo {
+  margin: 1.5% auto;
 }/*# sourceMappingURL=index.css.map */
