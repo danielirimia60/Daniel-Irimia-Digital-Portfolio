@@ -7,6 +7,17 @@
     @extend %default;
 }
 
+body::-webkit-scrollbar {
+    width: 8px;
+}
+body::-webkit-scrollbar-track {
+    border-radius: 20px;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: $yellow-1;
+    border-radius: 20px;
+}
+
 // Setting up the header grid
 
 header {
@@ -38,7 +49,7 @@ header {
             height: 100vh;
             position: relative;
             z-index: 0;
-            opacity: .9;
+            opacity: 1;
         }
 
         .navigation-container {
@@ -52,6 +63,14 @@ header {
             position: relative;
             z-index: 2;
 
+            .logo-container {
+                width: 6em;
+                
+                img {
+                    width: 100%;
+                }
+            }
+
             nav {
                 display: flex;
                 justify-content: space-between;
@@ -61,17 +80,20 @@ header {
 
             .navigation-links {
                 display: flex;
-                margin-left: 2em;
                 list-style: none;
 
                 .link a {
                     text-decoration: none;
-                    padding: .5rem;
+                    padding: .7rem;
                     @extend %raleway-semib;
                     color: $white-1;
                     font-size: 1.2rem;
-                    cursor: pointer;
+
+                    &:hover {
+                        color: $yellow-1;
+                    }
                 }
+
             }
 
             .social-media {
@@ -82,6 +104,11 @@ header {
                     width: 2em;
                     padding: .7em;
                     filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
+
+                    &:hover {
+                        filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
+                        transform: scale(.95);
+                    }
                 }
             }
         }
@@ -91,10 +118,22 @@ header {
             position: relative;
             z-index: 2;
             align-self: center;
+            width: min-content;
+            margin-top: 12%;
 
             .title-r1,
-            .title-r3 {
+            .title-r3,
+            .title-r2 {
+                @extend %raleway-bold;
                 @extend %gradient-text;
+            }
+            .title-r1, .title-r3 {
+                background-image: linear-gradient(90deg, $first-yellow, $second-yellow, $third-yellow, $fourth-yellow, $fifth-yellow);
+                margin-left: 6rem;
+            }
+            .title-r2 {
+                background-image: linear-gradient(90deg, $first-white, $second-white, $third-white, $fourth-white, $fifth-white);
+                margin-left: 2rem;
             }
         }
 
@@ -109,6 +148,111 @@ header {
             align-self: flex-end;
             justify-self: center;
             padding-bottom: .5em;
+            opacity: .7;
         }
+    }
+}
+
+main {
+    @extend %center;
+    color: $light-grey;
+    position: relative;
+    height: 480vh;
+
+    span {
+        color: $yellow-2;
+    }
+
+    .intro-title {
+        @extend %lato-bold;
+        font-size: 9rem;
+        max-width: 70%;
+        @extend %center;
+        margin-top: 10%;
+    }
+
+    .intro-content1,
+    .intro-content2 {
+        font-size: 2.25rem;
+        @extend %raleway-reg;
+        width: 40%;
+        
+    }
+    .intro-content1 {
+        position: absolute;
+        right: 10px;
+        top: 90rem;
+    }
+    .intro-content2 {
+        position: absolute;
+        left: 20px;
+        top: 140rem;
+    }
+    .outro-content {
+        font-size: 2.25rem;
+        position: absolute;
+        right: 10px;
+        top: 190rem;
+        @extend %raleway-reg;
+        padding: .2rem;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            padding-bottom: 1em;
+        }
+
+        img {
+            filter: invert(89%) sepia(56%) saturate(7480%) hue-rotate(353deg) brightness(82%) contrast(105%);
+            width: .5em;
+            margin-right: .5em;
+        }
+    }
+}
+footer {
+    @extend %center;
+    text-transform: uppercase;
+    @extend %raleway-reg;
+    color: $white-1;
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 2%;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: $yellow-1;
+        }
+    }
+
+    .footer-content {
+        border-top: 1px solid $white-1;
+        border-bottom: 1px solid $white-1;
+        display: flex;
+        gap: 4em;
+        justify-content: center;
+        padding-top: 1.2em;
+        padding-bottom: 1.2em;
+
+        .left-column {
+            width: 15%;
+        }
+
+        .middle-column,
+        .right-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+    }
+
+    .footer-logo {
+        margin: 1.5% auto;
     }
 }
