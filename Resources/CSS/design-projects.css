@@ -1,0 +1,381 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header, header .navigation-container, footer .footer-content, footer {
+  margin: 0 auto;
+}
+
+footer {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+header .navigation-container .navigation-links .link a {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+footer {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #D4CC00;
+}
+footer .footer-content {
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  display: flex;
+  gap: 3em;
+  justify-content: space-between;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+footer .footer-content .left-column {
+  width: 15%;
+  min-width: 23ch;
+  line-height: 1.75;
+}
+footer .footer-content .left-column span {
+  font-size: 1.22rem;
+  font-weight: 100;
+}
+footer .footer-content .middle-column,
+footer .footer-content .right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+footer .footer-logo {
+  margin: 1.5% auto 1%;
+}
+
+header .navigation-container {
+  grid-area: 1/1;
+  display: flex;
+  justify-self: center;
+  width: 90%;
+  padding-top: 0.7em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+header .navigation-container .logo-container {
+  width: 6em;
+}
+header .navigation-container .logo-container img {
+  width: 100%;
+}
+header .navigation-container nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3em;
+  width: 90%;
+  position: relative;
+}
+header .navigation-container .navigation-links {
+  display: flex;
+  list-style: none;
+}
+header .navigation-container .navigation-links .link a {
+  text-decoration: none;
+  padding: 0.7rem;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+}
+header .navigation-container .navigation-links .link a:hover {
+  color: #D4CC00;
+}
+header .navigation-container .social-media {
+  display: flex;
+}
+header .navigation-container .social-media img {
+  aspect-ratio: 1;
+  width: 2em;
+  padding: 0.7em;
+  filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
+}
+header .navigation-container .social-media img:hover {
+  filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
+  transform: scale(0.95);
+}
+
+html body::-webkit-scrollbar {
+  width: 8px;
+}
+html body::-webkit-scrollbar-track {
+  border-radius: 20px;
+}
+html body::-webkit-scrollbar-thumb {
+  background-color: #D4CC00;
+  border-radius: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header, footer, footer .footer-content, header .navigation-container {
+  margin: 0 auto;
+}
+
+footer {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+header .navigation-container .navigation-links .link a {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+footer {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #D4CC00;
+}
+footer .footer-content {
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  display: flex;
+  gap: 3em;
+  justify-content: space-between;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+footer .footer-content .left-column {
+  width: 15%;
+  min-width: 23ch;
+  line-height: 1.75;
+}
+footer .footer-content .left-column span {
+  font-size: 1.22rem;
+  font-weight: 100;
+}
+footer .footer-content .middle-column,
+footer .footer-content .right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+footer .footer-logo {
+  margin: 1.5% auto 1%;
+}
+
+header .navigation-container {
+  grid-area: 1/1;
+  display: flex;
+  justify-self: center;
+  width: 90%;
+  padding-top: 0.7em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+header .navigation-container .logo-container {
+  width: 6em;
+}
+header .navigation-container .logo-container img {
+  width: 100%;
+}
+header .navigation-container nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3em;
+  width: 90%;
+  position: relative;
+}
+header .navigation-container .navigation-links {
+  display: flex;
+  list-style: none;
+}
+header .navigation-container .navigation-links .link a {
+  text-decoration: none;
+  padding: 0.7rem;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+}
+header .navigation-container .navigation-links .link a:hover {
+  color: #D4CC00;
+}
+header .navigation-container .social-media {
+  display: flex;
+}
+header .navigation-container .social-media img {
+  aspect-ratio: 1;
+  width: 2em;
+  padding: 0.7em;
+  filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
+}
+header .navigation-container .social-media img:hover {
+  filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
+  transform: scale(0.95);
+}
+
+html body::-webkit-scrollbar {
+  width: 8px;
+}
+html body::-webkit-scrollbar-track {
+  border-radius: 20px;
+}
+html body::-webkit-scrollbar-thumb {
+  background-color: #D4CC00;
+  border-radius: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+header, footer, footer .footer-content, header .navigation-container {
+  margin: 0 auto;
+}
+
+footer {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+}
+
+header .navigation-container .navigation-links .link a {
+  font-family: "Raleway", sans-serif;
+  font-weight: 600;
+}
+
+footer {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
+  flex-direction: column;
+}
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+footer a:hover {
+  color: #D4CC00;
+}
+footer .footer-content {
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  display: flex;
+  gap: 3em;
+  justify-content: space-between;
+  padding-top: 1.5em;
+  padding-bottom: 1.5em;
+}
+footer .footer-content .left-column {
+  width: 15%;
+  min-width: 23ch;
+  line-height: 1.75;
+}
+footer .footer-content .left-column span {
+  font-size: 1.22rem;
+  font-weight: 100;
+}
+footer .footer-content .middle-column,
+footer .footer-content .right-column {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75em;
+}
+footer .footer-logo {
+  margin: 1.5% auto 1%;
+}
+
+header .navigation-container {
+  grid-area: 1/1;
+  display: flex;
+  justify-self: center;
+  width: 90%;
+  padding-top: 0.7em;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: space-between;
+  position: relative;
+  z-index: 2;
+}
+header .navigation-container .logo-container {
+  width: 6em;
+}
+header .navigation-container .logo-container img {
+  width: 100%;
+}
+header .navigation-container nav {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 3em;
+  width: 90%;
+  position: relative;
+}
+header .navigation-container .navigation-links {
+  display: flex;
+  list-style: none;
+}
+header .navigation-container .navigation-links .link a {
+  text-decoration: none;
+  padding: 0.7rem;
+  color: #FFFFFF;
+  font-size: 1.2rem;
+}
+header .navigation-container .navigation-links .link a:hover {
+  color: #D4CC00;
+}
+header .navigation-container .social-media {
+  display: flex;
+}
+header .navigation-container .social-media img {
+  aspect-ratio: 1;
+  width: 2em;
+  padding: 0.7em;
+  filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
+}
+header .navigation-container .social-media img:hover {
+  filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
+  transform: scale(0.95);
+}
+
+html body::-webkit-scrollbar {
+  width: 8px;
+}
+html body::-webkit-scrollbar-track {
+  border-radius: 20px;
+}
+html body::-webkit-scrollbar-thumb {
+  background-color: #D4CC00;
+  border-radius: 20px;
+}
+
+header {
+  width: 100%;
+}/*# sourceMappingURL=design-projects.css.map */
