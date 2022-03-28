@@ -1,9 +1,13 @@
 @import './variables.scss';
+@import './mixins.scss';
+@import './functions.scss';
 
+// Global styles
 %default {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 %center {
     margin: 0 auto;
@@ -12,6 +16,8 @@
     width: 100%;
     height: 100vh;
 }
+
+// Fonts
 %raleway-reg {
     font-family: 'Raleway', sans-serif;
     font-weight: 400;
@@ -28,8 +34,147 @@
     font-family: 'Lato', sans-serif;
     font-weight: 700;
 }
+
+// Gradient text
 %gradient-text {
     background-clip: text;
     color: transparent;
     font-size: 8rem;
+}
+
+// Footer styles
+%footer {
+    @extend %center;
+    text-transform: uppercase;
+    @extend %raleway-reg;
+    color: $white-1;
+    display: flex;
+    flex-direction: column;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        &:hover {
+            color: $yellow-1;
+        }
+    }
+
+    .footer-content {
+        @extend %center;
+        border-top: 1px solid $white-1;
+        border-bottom: 1px solid $white-1;
+        display: flex;
+        gap: 3em;
+        justify-content: space-between;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+
+        .left-column {
+            width: 15%;
+            min-width: 23ch;
+            line-height: 1.75;
+
+            span {
+                font-size: 1.22rem;
+                font-weight: 100;
+            }
+        }
+
+        .middle-column,
+        .right-column {
+            display: flex;
+            flex-direction: column;
+            gap: .75em;
+        }
+
+    }
+
+    .footer-logo {
+        margin: 1.5% auto 1%;
+    }
+}
+
+// Nav bar
+
+%nav-bar {
+    .navigation-container {
+        grid-area: 1 / 1;
+        display: flex;
+        justify-self: center;
+        width: 90%;
+        padding-top: .7em;
+        height: fit-content;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+        @extend %center;
+
+        .logo-container {
+            width: 6em;
+            
+            img {
+                width: 100%;
+            }
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 3em;
+            width: 90%;
+            position: relative;
+        }
+
+        .navigation-links {
+            display: flex;
+            list-style: none;
+
+            .link a {
+                text-decoration: none;
+                padding: .7rem;
+                @extend %raleway-semib;
+                color: $white-1;
+                font-size: 1.2rem;
+
+                &:hover {
+                    color: $yellow-1;
+                }
+            }
+
+        }
+
+        .social-media {
+            display: flex;
+
+            img {
+                aspect-ratio: 1;
+                width: 2em;
+                padding: .7em;
+                filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
+
+                &:hover {
+                    filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
+                    transform: scale(.95);
+                }
+            }
+        }
+    }
+}
+
+// Scroll bar
+
+%custom-scrollbar {
+    body {
+        &::-webkit-scrollbar {
+            width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+            border-radius: 20px;
+        }
+        &::-webkit-scrollbar-thumb {
+            background-color: $yellow-1;
+            border-radius: 20px;
+        }
+    }
 }
