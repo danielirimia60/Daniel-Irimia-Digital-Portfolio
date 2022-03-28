@@ -1,0 +1,21 @@
+@import './variables.scss';
+@import './functions.scss';
+@import './mixins.scss';
+@import './placeholders.scss';
+
+* {
+    @extend %default;
+}
+
+html {
+    @extend %custom-scrollbar;
+}
+
+header {
+    width: 100%;
+    @extend %center;
+    @extend %nav-bar;
+}
+footer {
+    @extend %footer;
+}
