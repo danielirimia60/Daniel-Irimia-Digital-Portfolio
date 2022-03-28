@@ -7,15 +7,8 @@
     @extend %default;
 }
 
-body::-webkit-scrollbar {
-    width: 8px;
-}
-body::-webkit-scrollbar-track {
-    border-radius: 20px;
-}
-body::-webkit-scrollbar-thumb {
-    background-color: $yellow-1;
-    border-radius: 20px;
+html {
+    @extend %custom-scrollbar;
 }
 
 // Setting up the header grid
@@ -52,66 +45,7 @@ header {
             opacity: 1;
         }
 
-        .navigation-container {
-            grid-area: 1 / 1;
-            display: flex;
-            justify-self: center;
-            width: 90%;
-            padding-top: .7em;
-            height: fit-content;
-            justify-content: space-between;
-            position: relative;
-            z-index: 2;
-
-            .logo-container {
-                width: 6em;
-                
-                img {
-                    width: 100%;
-                }
-            }
-
-            nav {
-                display: flex;
-                justify-content: space-between;
-                padding-top: 3em;
-                width: 90%;
-            }
-
-            .navigation-links {
-                display: flex;
-                list-style: none;
-
-                .link a {
-                    text-decoration: none;
-                    padding: .7rem;
-                    @extend %raleway-semib;
-                    color: $white-1;
-                    font-size: 1.2rem;
-
-                    &:hover {
-                        color: $yellow-1;
-                    }
-                }
-
-            }
-
-            .social-media {
-                display: flex;
-
-                img {
-                    aspect-ratio: 1;
-                    width: 2em;
-                    padding: .7em;
-                    filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
-
-                    &:hover {
-                        filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
-                        transform: scale(.95);
-                    }
-                }
-            }
-        }
+        @extend %nav-bar;
 
         .title-container {
             grid-area: 1 / 1;
@@ -199,6 +133,11 @@ main {
         a {
             text-decoration: none;
             color: inherit;
+
+            &:hover {
+                text-decoration: underline;
+                color: $yellow-2;
+            }
         }
 
         ul {
@@ -213,46 +152,5 @@ main {
     }
 }
 footer {
-    @extend %center;
-    text-transform: uppercase;
-    @extend %raleway-reg;
-    color: $white-1;
-    display: flex;
-    flex-direction: column;
-    
-    margin-bottom: 2%;
-
-    a {
-        color: inherit;
-        text-decoration: none;
-
-        &:hover {
-            color: $yellow-1;
-        }
-    }
-
-    .footer-content {
-        border-top: 1px solid $white-1;
-        border-bottom: 1px solid $white-1;
-        display: flex;
-        gap: 4em;
-        justify-content: center;
-        padding-top: 1.2em;
-        padding-bottom: 1.2em;
-
-        .left-column {
-            width: 15%;
-        }
-
-        .middle-column,
-        .right-column {
-            display: flex;
-            flex-direction: column;
-        }
-
-    }
-
-    .footer-logo {
-        margin: 1.5% auto;
-    }
+    @extend %footer;
 }
