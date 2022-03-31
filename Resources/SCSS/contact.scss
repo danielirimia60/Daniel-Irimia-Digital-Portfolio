@@ -1,10 +1,10 @@
 @import './variables.scss';
 @import './functions.scss';
-@import './mixins.scss';
 @import './placeholders.scss';
 
 * {
     @extend %default;
+    //outline: 1px solid red;
 }
 
 html {
@@ -22,6 +22,106 @@ main {
         position: relative;
         z-index: 0;
     }
+
+    .filter {
+        grid-area: 1 / 1;
+        width: 100%;
+        height: 100%;
+        box-shadow: inset -10px 0 20px 20px #000;
+        position: relative;
+        z-index: 1;
+    }
+
+    .form-container {
+        background-color: #000;
+        width: 50%;
+        height: 30%;
+        position: relative;
+        z-index: 3;
+        grid-area: 1 / 1;
+        place-self: center;
+        display: flex;
+        justify-content: space-between;
+
+        .icon-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: .5em;
+            width: 20%;
+
+            .file {
+                width: 4em;
+                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(311deg) brightness(104%) contrast(101%);
+            }
+
+            h3 {
+                color: $white-1;
+                @extend %raleway-reg;
+            }
+
+            .arrow {
+                width: 1.5em;
+                filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(311deg) brightness(104%) contrast(101%);
+            }
+        }
+
+        .form {
+            width: 60%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            form {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1em;
+    
+                .field {
+                    width: 70%;
+                    display: flex;
+                    justify-content: space-between;
+
+                    label {
+                        @extend %raleway-reg;
+                        color: $white-1;
+                        font-size: 1.2rem;
+                    }
+
+                    input, textarea {
+                        width: 70%;
+                        height: 2.5em;
+                    }
+                    textarea {
+                        height: 6em;
+                    }
+                }
+                
+                input[type="submit"] {
+                    border: none;
+                    padding-block: .5em;
+                    padding-inline: 1.5em;
+                    border-radius: 50px;
+                    @extend %raleway-semib;
+                    font-size: 1.2rem;
+                    margin-left: 20%;
+                    margin-top: 1%;
+
+                    &:hover {
+                        background-color: $yellow-1;
+                        transition: background-color 500ms;
+                    }
+                }
+
+            }
+        }
+
+    }
+
 }
 header {
     width: 100%;
