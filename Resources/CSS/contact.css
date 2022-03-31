@@ -5,16 +5,16 @@
   scroll-behavior: smooth;
 }
 
-header, header .navigation-container, footer .footer-content, footer {
+header, main, header .navigation-container, footer .footer-content, footer {
   margin: 0 auto;
 }
 
-footer {
+main .form-container .form form .field label, main .form-container .icon-container h3, footer {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 
-header .navigation-container .navigation-links .link a {
+main .form-container .form form input[type=submit], header .navigation-container .navigation-links .link a {
   font-family: "Raleway", sans-serif;
   font-weight: 600;
 }
@@ -66,8 +66,6 @@ header .navigation-container {
   justify-self: center;
   width: 90%;
   padding-top: 0.7em;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   justify-content: space-between;
   position: relative;
@@ -124,258 +122,101 @@ html body::-webkit-scrollbar-thumb {
   border-radius: 20px;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-header, footer, footer .footer-content, header .navigation-container {
-  margin: 0 auto;
-}
-
-footer {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-}
-
-header .navigation-container .navigation-links .link a {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-}
-
-footer {
-  text-transform: uppercase;
-  color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-}
-footer a {
-  color: inherit;
-  text-decoration: none;
-}
-footer a:hover {
-  color: #D4CC00;
-}
-footer .footer-content {
-  border-top: 1px solid #FFFFFF;
-  border-bottom: 1px solid #FFFFFF;
-  display: flex;
-  gap: 3em;
-  justify-content: space-between;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-}
-footer .footer-content .left-column {
-  width: 15%;
-  min-width: 23ch;
-  line-height: 1.75;
-}
-footer .footer-content .left-column span {
-  font-size: 1.22rem;
-  font-weight: 100;
-}
-footer .footer-content .middle-column,
-footer .footer-content .right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75em;
-}
-footer .footer-logo {
-  margin: 1.5% auto 1%;
-}
-
-header .navigation-container {
-  grid-area: 1/1;
-  display: flex;
-  justify-self: center;
-  width: 90%;
-  padding-top: 0.7em;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
-}
-header .navigation-container .logo-container {
-  width: 6em;
-}
-header .navigation-container .logo-container img {
+main {
+  display: grid;
+  grid-template: 1fr/1fr;
   width: 100%;
 }
-header .navigation-container nav {
+main video {
+  grid-area: 1/1;
+  width: 100%;
+  position: relative;
+  z-index: 0;
+}
+main .filter {
+  grid-area: 1/1;
+  width: 100%;
+  height: 100%;
+  box-shadow: inset -10px 0 20px 20px #000;
+  position: relative;
+  z-index: 1;
+}
+main .form-container {
+  background-color: #000;
+  width: 50%;
+  height: 30%;
+  position: relative;
+  z-index: 3;
+  grid-area: 1/1;
+  place-self: center;
   display: flex;
   justify-content: space-between;
-  padding-top: 3em;
-  width: 90%;
-  position: relative;
 }
-header .navigation-container .navigation-links {
+main .form-container .icon-container {
   display: flex;
-  list-style: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5em;
+  width: 20%;
 }
-header .navigation-container .navigation-links .link a {
-  text-decoration: none;
-  padding: 0.7rem;
+main .form-container .icon-container .file {
+  width: 4em;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(311deg) brightness(104%) contrast(101%);
+}
+main .form-container .icon-container h3 {
+  color: #FFFFFF;
+}
+main .form-container .icon-container .arrow {
+  width: 1.5em;
+  filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(311deg) brightness(104%) contrast(101%);
+}
+main .form-container .form {
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .form-container .form form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+main .form-container .form form .field {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
+main .form-container .form form .field label {
   color: #FFFFFF;
   font-size: 1.2rem;
 }
-header .navigation-container .navigation-links .link a:hover {
-  color: #D4CC00;
+main .form-container .form form .field input, main .form-container .form form .field textarea {
+  width: 70%;
+  height: 2.5em;
 }
-header .navigation-container .social-media {
-  display: flex;
+main .form-container .form form .field textarea {
+  height: 6em;
 }
-header .navigation-container .social-media img {
-  aspect-ratio: 1;
-  width: 2em;
-  padding: 0.7em;
-  filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
-}
-header .navigation-container .social-media img:hover {
-  filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
-  transform: scale(0.95);
-}
-
-html body::-webkit-scrollbar {
-  width: 8px;
-}
-html body::-webkit-scrollbar-track {
-  border-radius: 20px;
-}
-html body::-webkit-scrollbar-thumb {
-  background-color: #D4CC00;
-  border-radius: 20px;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
-}
-
-header, footer, footer .footer-content, header .navigation-container {
-  margin: 0 auto;
-}
-
-footer {
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-}
-
-header .navigation-container .navigation-links .link a {
-  font-family: "Raleway", sans-serif;
-  font-weight: 600;
-}
-
-footer {
-  text-transform: uppercase;
-  color: #FFFFFF;
-  display: flex;
-  flex-direction: column;
-}
-footer a {
-  color: inherit;
-  text-decoration: none;
-}
-footer a:hover {
-  color: #D4CC00;
-}
-footer .footer-content {
-  border-top: 1px solid #FFFFFF;
-  border-bottom: 1px solid #FFFFFF;
-  display: flex;
-  gap: 3em;
-  justify-content: space-between;
-  padding-top: 1.5em;
-  padding-bottom: 1.5em;
-}
-footer .footer-content .left-column {
-  width: 15%;
-  min-width: 23ch;
-  line-height: 1.75;
-}
-footer .footer-content .left-column span {
-  font-size: 1.22rem;
-  font-weight: 100;
-}
-footer .footer-content .middle-column,
-footer .footer-content .right-column {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75em;
-}
-footer .footer-logo {
-  margin: 1.5% auto 1%;
-}
-
-header .navigation-container {
-  grid-area: 1/1;
-  display: flex;
-  justify-self: center;
-  width: 90%;
-  padding-top: 0.7em;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
-  justify-content: space-between;
-  position: relative;
-  z-index: 2;
-}
-header .navigation-container .logo-container {
-  width: 6em;
-}
-header .navigation-container .logo-container img {
-  width: 100%;
-}
-header .navigation-container nav {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 3em;
-  width: 90%;
-  position: relative;
-}
-header .navigation-container .navigation-links {
-  display: flex;
-  list-style: none;
-}
-header .navigation-container .navigation-links .link a {
-  text-decoration: none;
-  padding: 0.7rem;
-  color: #FFFFFF;
+main .form-container .form form input[type=submit] {
+  border: none;
+  padding-block: 0.5em;
+  padding-inline: 1.5em;
+  border-radius: 50px;
   font-size: 1.2rem;
+  margin-left: 20%;
+  margin-top: 1%;
 }
-header .navigation-container .navigation-links .link a:hover {
-  color: #D4CC00;
-}
-header .navigation-container .social-media {
-  display: flex;
-}
-header .navigation-container .social-media img {
-  aspect-ratio: 1;
-  width: 2em;
-  padding: 0.7em;
-  filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
-}
-header .navigation-container .social-media img:hover {
-  filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
-  transform: scale(0.95);
-}
-
-html body::-webkit-scrollbar {
-  width: 8px;
-}
-html body::-webkit-scrollbar-track {
-  border-radius: 20px;
-}
-html body::-webkit-scrollbar-thumb {
+main .form-container .form form input[type=submit]:hover {
   background-color: #D4CC00;
-  border-radius: 20px;
+  transition: background-color 500ms;
 }
 
 header {
   width: 100%;
-}/*# sourceMappingURL=contact.css.map */
+}
+
+/*# sourceMappingURL=contact.css.map */
