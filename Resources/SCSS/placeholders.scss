@@ -1,5 +1,4 @@
 @import './variables.scss';
-@import './mixins.scss';
 @import './functions.scss';
 
 // Global styles
@@ -15,6 +14,14 @@
 %full-screen {
     width: 100%;
     height: 100vh;
+}
+
+%overflow {
+    overflow-anchor: auto !important;
+    overflow-clip-margin: 0px !important;
+    overflow-wrap: normal !important;
+    overflow-x: visible !important;
+    overflow-y: visible !important;
 }
 
 // Fonts
