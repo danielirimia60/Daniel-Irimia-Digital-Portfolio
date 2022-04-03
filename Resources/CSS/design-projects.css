@@ -5,8 +5,16 @@
   scroll-behavior: smooth;
 }
 
-main .project-container .info, main .project-container .title, main .project-container, main, header, header .navigation-container, footer .footer-content, footer {
+main .project-container .info, main .project-container .carousel .mySwiper .swiper-slide img, main .project-container .carousel .mySwiper .swiper-slide, main .project-container .carousel .mySwiper, main .project-container .carousel, main .project-container .title, main, header, header .navigation-container, footer .footer-content, footer {
   margin: 0 auto;
+}
+
+main .project-container .carousel {
+  overflow-anchor: auto !important;
+  overflow-clip-margin: 0px !important;
+  overflow-wrap: normal !important;
+  overflow-x: visible !important;
+  overflow-y: visible !important;
 }
 
 main .project-container .info, main .project-container .title, footer {
@@ -66,8 +74,6 @@ header .navigation-container {
   justify-self: center;
   width: 90%;
   padding-top: 0.7em;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   justify-content: space-between;
   position: relative;
@@ -126,11 +132,13 @@ html body::-webkit-scrollbar-thumb {
 
 header {
   width: 100%;
+  overflow-x: hidden;
 }
 
 main {
   display: flex;
   flex-direction: column;
+  overflow-y: hidden;
 }
 main .project-container {
   display: flex;
@@ -142,21 +150,38 @@ main .project-container .title {
   color: #FFFFFF;
 }
 main .project-container .carousel {
+  width: 100%;
+  max-width: 30rem;
   margin-block: 5%;
+}
+main .project-container .carousel .mySwiper {
+  overflow: inherit;
+}
+main .project-container .carousel .mySwiper .swiper-wrapper {
+  height: 100%;
+  overflow: inherit;
+}
+main .project-container .carousel .mySwiper .swiper-slide {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  height: 100%;
+  overflow: inherit;
 }
-main .project-container .carousel img {
-  width: 70%;
+main .project-container .carousel .mySwiper .swiper-slide img {
+  display: block;
+  object-fit: cover;
+  height: 100%;
 }
-main .project-container .carousel button {
-  margin-inline: 0.2em;
-  border: none;
-  border-radius: 50%;
-  width: 0.8em;
-  aspect-ratio: 1;
-  background-color: #CFCFCF;
+main .project-container .carousel .mySwiper .pagination {
+  position: relative;
+  margin-top: 5%;
+}
+main .project-container .carousel .mySwiper .swiper-pagination-bullet {
+  background-color: #fff;
+  height: 0.75rem;
+  width: 0.8rem;
+}
+main .project-container .carousel .mySwiper .swiper-pagination-bullet-active {
+  background-color: #fff;
 }
 main .project-container .info {
   width: 60%;
@@ -187,4 +212,10 @@ main .project-container .info p {
   width: 45ch;
   text-indent: 0.5em;
   line-height: 1.2;
-}/*# sourceMappingURL=design-projects.css.map */
+}
+
+footer {
+  overflow-x: hidden;
+}
+
+/*# sourceMappingURL=design-projects.css.map */
