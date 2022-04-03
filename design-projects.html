@@ -9,6 +9,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="./Resources/CSS/design-projects.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 
     <!-- Fonts -->
 
@@ -46,12 +47,32 @@
                 <h2><span>Project N31</span> - a mobile first design showcasing an application meant to facilitate crypto exchanges.</h2>
             </div>
             <div class="carousel">
-                <img src="./Resources/Images/P-ss-1.jpg" alt="a">
-                <div class="buttons">
-                    <button></button>
-                    <button></button>
-                    <button></button>
-                    <button></button>
+                <!-- Slider main container -->
+                <div class="swiper mySwiper">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide">
+                            <img src="./Resources/Images/Project-n31-s1.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./Resources/Images/Project-n31-s2.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./Resources/Images/Project-n31-s3.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./Resources/Images/Project-n31-s4.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./Resources/Images/Project-n31-s5.jpg">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="./Resources/Images/Project-n31-s6.jpg">
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination pagination"></div>
                 </div>
             </div>
             <div class="info">
@@ -84,5 +105,7 @@
             <img src="./Resources/Images/Full_logo.svg" alt="Logo showing the initials of my name - Dan Irimia">
         </div>
     </footer>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./Resources/Javascript/swiper.js"></script>
 </body>
 </html>
