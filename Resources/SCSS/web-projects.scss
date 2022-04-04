@@ -1,6 +1,5 @@
 @import './variables.scss';
 @import './functions.scss';
-@import './mixins.scss';
 @import './placeholders.scss';
 
 * {
@@ -15,7 +14,116 @@ header {
     width: 100%;
     @extend %center;
     @extend %nav-bar;
+    overflow-x: hidden;
+}
+main {
+    @extend %center;
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden;
+
+    .project-container {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            @extend %center;
+            max-width: 60%;
+            @extend %raleway-reg;
+            font-size: 2rem;
+            color: $white-1;        
+
+            span {
+                @extend %raleway-semib;
+            }
+        }
+
+        .carousel {
+            @extend %center;
+            width: 100%;
+            @extend %overflow;
+            margin-block: 5%;
+
+            .mySwiper {
+                @extend %center;
+                overflow: inherit;
+
+                .swiper-wrapper {
+                    height: 100%;
+                    overflow: inherit;
+                }
+
+                .swiper-slide {
+                    @extend %center;
+                    display: flex;
+                    height: 100%;
+                    overflow: inherit;
+
+                    img {
+                        @extend %center;
+                        display: block;
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+
+                .pagination {
+                    position: relative;
+                    margin-top: 5%;
+                }
+
+                .swiper-pagination-bullet {
+                    background-color: #fff;
+                    height: .75rem;
+                    width: .8rem;
+                }
+
+                .swiper-pagination-bullet-active {
+                    background-color: #fff;
+               }
+            }
+        }
+
+        .info {
+            @extend %center;
+            width: 60%;
+            margin-bottom: 2%;
+            display: flex;
+            justify-content: space-between;
+            gap: 5em;
+            @extend %raleway-reg;
+            font-size: .85rem;
+            color: $white-1;
+
+            ul li {
+                padding-block: .2em;
+                
+                img {
+                    margin-right: .314em;
+                    aspect-ratio: 1;
+                    width: .75rem;
+                    filter: invert(95%) sepia(39%) saturate(0%) hue-rotate(201deg) brightness(101%) contrast(101%);
+                }
+                
+                a {
+                    text-decoration: none;
+                    color: $white-1;
+
+                    &:hover {
+                        color: $yellow-1;
+                    }
+                }
+            }
+
+            p {
+                width: 45ch;
+                text-indent: .5em;
+                line-height: 1.2;
+            }
+        }
+    }
 }
 footer {
     @extend %footer;
+    overflow-x: hidden;
 }
