@@ -151,7 +151,7 @@ main .project-container .title {
 }
 main .project-container .carousel {
   width: 100%;
-  max-width: 30rem;
+  max-width: 28rem;
   margin-block: 5%;
 }
 main .project-container .carousel .mySwiper {
