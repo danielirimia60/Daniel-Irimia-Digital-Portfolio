@@ -45,7 +45,8 @@ main {
             @extend %center;
             width: 100%;
             @extend %overflow;
-            margin-block: 5%;
+            margin-top: 5%;
+            margin-bottom: 2%;
 
             .mySwiper {
                 @extend %center;
@@ -73,7 +74,7 @@ main {
 
                 .pagination {
                     position: relative;
-                    margin-top: 5%;
+                    margin-top: 2%;
                 }
 
                 .swiper-pagination-bullet {
