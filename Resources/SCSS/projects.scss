@@ -26,6 +26,8 @@ main {
 
     .container {
         width: 100%;
+        position: relative;
+        z-index: 2;
 
         a {
             width: 100%;
@@ -54,8 +56,9 @@ main {
         }
 
         &:hover {
-            transform: scale(1.05);
+            transform: scale(1.03);
             transition: transform 1500ms;
+            z-index: 5;
 
             img {
                 filter: saturate(100%);
