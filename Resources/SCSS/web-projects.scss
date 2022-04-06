@@ -29,12 +29,15 @@ main {
         .title {
             @extend %center;
             max-width: 60%;
-            @extend %raleway-reg;
             font-size: 2rem;
             color: $white-1;        
 
+            h2 {
+                @extend %raleway-reg;
+            }
+
             span {
-                @extend %raleway-semib;
+                @extend %raleway-bold;
             }
         }
 
@@ -64,6 +67,7 @@ main {
                         display: block;
                         object-fit: cover;
                         height: 100%;
+                        width: 60%;
                     }
                 }
 
