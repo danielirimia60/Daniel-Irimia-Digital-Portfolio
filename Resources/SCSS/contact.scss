@@ -65,6 +65,12 @@ main {
                 width: 1.5em;
                 filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(311deg) brightness(104%) contrast(101%);
             }
+
+            &:hover {
+                .arrow {
+                    filter: invert(91%) sepia(26%) saturate(2841%) hue-rotate(5deg) brightness(89%) contrast(101%);
+                }
+            }
         }
 
         .form {
