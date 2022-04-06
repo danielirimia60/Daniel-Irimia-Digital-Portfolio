@@ -1,6 +1,5 @@
 @import './variables.scss';
 @import './functions.scss';
-@import './mixins.scss';
 @import './placeholders.scss';
 
 * {
@@ -16,6 +15,60 @@ header {
     @extend %center;
     @extend %nav-bar;
 }
+
+main {
+    @extend %center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @extend %roboto-reg;
+    color: $light-grey;
+    margin-bottom: 5%;
+
+    .intro {
+        @extend %about-p;
+        width: 60%;
+        font-size: 1.2rem;
+        
+    }
+
+    h1 {
+        font-size: 5rem;
+        padding: 1em;
+    }
+
+    .section {
+        display: flex;
+        width: 60%;
+        padding: 1em;
+
+        img {
+            width: 5em;
+        }
+
+        p {
+            @extend %about-p;
+            margin: 0 auto;
+            width: 70%;
+            font-size: 1.2rem;
+        }
+    }
+    .secondary-skills {
+        display: flex;
+        justify-content: space-evenly;
+        width: 40%;
+        margin-top: 3%;
+        align-items: center;
+
+
+        img {
+            width: 2em;
+            filter: invert(94%) sepia(0%) saturate(30%) hue-rotate(228deg) brightness(89%) contrast(92%);
+            padding: .7em;
+        }
+    }
+}
+
 footer {
     @extend %footer;
 }
