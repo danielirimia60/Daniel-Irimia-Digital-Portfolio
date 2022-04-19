@@ -47,8 +47,9 @@
 }
 
 // Gradient text
+
 %gradient-text {
-    background-clip: text;
+    -webkit-background-clip: text;
     color: transparent;
     font-size: 8rem;
 }
