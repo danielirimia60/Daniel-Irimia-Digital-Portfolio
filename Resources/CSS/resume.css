@@ -5,205 +5,188 @@
   scroll-behavior: smooth;
 }
 
-footer, footer .footer-content, header .navigation-container, main, header {
+header, main, header .navigation-container, footer .footer-content, footer {
   margin: 0 auto;
 }
 
-footer {
-  font-family: 'Raleway', sans-serif;
+main .download-btn p, footer {
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 
 header .navigation-container .navigation-links .link a {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
 }
 
 footer {
   text-transform: uppercase;
   color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 footer a {
   color: inherit;
   text-decoration: none;
 }
-
 footer a:hover {
   color: #D4CC00;
 }
-
 footer .footer-content {
   border-top: 1px solid #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 3em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-
 footer .footer-content .left-column {
   width: 15%;
   min-width: 23ch;
   line-height: 1.75;
 }
-
 footer .footer-content .left-column span {
   font-size: 1.22rem;
   font-weight: 100;
 }
-
 footer .footer-content .middle-column,
 footer .footer-content .right-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: .75em;
+  flex-direction: column;
+  gap: 0.75em;
 }
-
 footer .footer-logo {
   margin: 1.5% auto 1%;
 }
 
 header .navigation-container {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: 1 / 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  grid-area: 1/1;
   display: flex;
   justify-self: center;
   width: 90%;
-  padding-top: .7em;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
+  padding-top: 0.7em;
   height: fit-content;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: relative;
   z-index: 2;
 }
-
 header .navigation-container .logo-container {
   width: 6em;
 }
-
 header .navigation-container .logo-container img {
   width: 100%;
 }
-
 header .navigation-container nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-top: 3em;
   width: 90%;
   position: relative;
 }
-
 header .navigation-container .navigation-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
-
 header .navigation-container .navigation-links .link a {
   text-decoration: none;
-  padding: .7rem;
+  padding: 0.7rem;
   color: #FFFFFF;
   font-size: 1.2rem;
 }
-
 header .navigation-container .navigation-links .link a:hover {
   color: #D4CC00;
 }
-
 header .navigation-container .social-media {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 header .navigation-container .social-media img {
   aspect-ratio: 1;
   width: 2em;
-  padding: .7em;
-  -webkit-filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
-          filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
+  padding: 0.7em;
+  filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
 }
-
 header .navigation-container .social-media img:hover {
-  -webkit-filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
-          filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
+  transform: scale(0.95);
 }
 
 html body::-webkit-scrollbar {
   width: 8px;
 }
-
 html body::-webkit-scrollbar-track {
   border-radius: 20px;
 }
-
 html body::-webkit-scrollbar-thumb {
   background-color: #D4CC00;
   border-radius: 20px;
 }
 
 main {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 1fr;
-  -ms-grid-columns: 1fr;
-      grid-template: 1fr / 1fr;
+  grid-template: 1fr/1fr;
   width: 100%;
+  position: relative;
 }
-
 main video {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: 1 / 1;
+  grid-area: 1/1;
   width: 100%;
   position: relative;
   z-index: 0;
 }
-
 main .filter {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: 1 / 1;
+  grid-area: 1/1;
   width: 100%;
   height: 100%;
-  -webkit-box-shadow: inset -10px 0 20px 20px #000;
-          box-shadow: inset -10px 0 20px 20px #000;
+  box-shadow: inset -10px 0 20px 20px #000;
   position: relative;
   z-index: 1;
+}
+main iframe {
+  grid-area: 1/1;
+  height: 82%;
+  width: 32.5%;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  border: none;
+  place-self: center;
+}
+@media screen and (max-width: 1800px) {
+  main iframe {
+    width: 40%;
+    height: 100%;
+  }
+}
+main .download-btn {
+  position: absolute;
+  z-index: 9;
+  display: flex;
+  top: 89%;
+  left: 59%;
+  color: #000;
+}
+main .download-btn img {
+  width: 1rem;
+  margin-inline: 0.5em;
+}
+main .download-btn p {
+  align-self: flex-end;
+}
+main .download-btn:hover {
+  color: blue;
+  text-decoration: none;
+}
+main .download-btn:hover :nth-child(1) {
+  filter: invert(42%) sepia(98%) saturate(7490%) hue-rotate(355deg) brightness(92%) contrast(127%);
+}
+main .download-btn:hover :nth-child(3) {
+  filter: invert(8%) sepia(100%) saturate(7495%) hue-rotate(248deg) brightness(90%) contrast(144%);
 }
 
 header {
   width: 100%;
 }
+
 /*# sourceMappingURL=resume.css.map */
