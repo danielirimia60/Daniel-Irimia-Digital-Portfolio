@@ -15,6 +15,7 @@ main {
     display: grid;
     grid-template: 1fr / 1fr;
     width: 100%;
+    position: relative;
 
     video {
         grid-area: 1 / 1;
@@ -30,6 +31,57 @@ main {
         box-shadow: inset -10px 0 20px 20px #000;
         position: relative;
         z-index: 1;
+    }
+
+    iframe {
+        grid-area: 1 / 1;
+        height: 82%;
+        width: 32.5%;
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        padding: 0;
+        border: none;
+        place-self: center;
+    }
+
+    @media screen and (max-width: 1800px) {
+        iframe {
+            width: 40%;
+            height: 100%;
+        }
+    }
+
+    .download-btn {
+        position: absolute;
+        z-index: 9;
+        display: flex;
+        top: 89%;
+        left: 59%;
+        color: #000;
+
+        img {
+            width: 1rem;
+            margin-inline: .5em;
+        }
+
+        p {
+            @extend %raleway-reg;
+            align-self: flex-end;
+        }
+
+        &:hover {
+            color: blue;
+            text-decoration: none;
+
+            :nth-child(1) {
+                filter: invert(42%) sepia(98%) saturate(7490%) hue-rotate(355deg) brightness(92%) contrast(127%);
+            }
+
+            :nth-child(3) {
+                filter: invert(8%) sepia(100%) saturate(7495%) hue-rotate(248deg) brightness(90%) contrast(144%);
+            }
+        }
     }
 
 }
