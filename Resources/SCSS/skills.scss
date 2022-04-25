@@ -8,6 +8,7 @@
 
 html {
     @extend %custom-scrollbar;
+    position: relative;
 }
 
 header {
@@ -23,41 +24,56 @@ main {
     align-items: center;
     @extend %roboto-reg;
     color: $light-grey;
-    margin-bottom: 5%;
+    margin-bottom: 7%;
 
     .intro {
         @extend %about-p;
-        width: 60%;
-        font-size: 1.2rem;
-        
+        width: 37%;
+        font-weight: 500;
+        font-size: 2rem;
+        margin-left: 3em;
     }
 
     h1 {
-        font-size: 5rem;
+        font-size: 10rem;
         padding: 1em;
+        padding-right: 4em;
     }
 
     .section {
         display: flex;
-        width: 60%;
-        padding: 1em;
+        justify-content: center;
+        align-content: flex-start;
+        gap: 1.5em;
+        padding: 3em;
+        padding-left: 9em;
 
-        img {
-            width: 5em;
+        .icons-container {
+            display: flex;
+            gap: .8em;
+            align-items: flex-end;
+
+            img {
+                width: 5em;
+                margin-bottom: .5em;
+            }
         }
 
         p {
             @extend %about-p;
-            margin: 0 auto;
-            width: 70%;
-            font-size: 1.2rem;
+            font-weight: 300;
+            width: 28.7%;
+            font-size: 1.5rem;
+            padding-block: 0;
         }
     }
+
     .secondary-skills {
         display: flex;
         justify-content: space-evenly;
-        width: 40%;
+        width: 37%;
         margin-top: 3%;
+        margin-left: 2%;
         align-items: center;
 
 
@@ -65,6 +81,40 @@ main {
             width: 2em;
             filter: invert(94%) sepia(0%) saturate(30%) hue-rotate(228deg) brightness(89%) contrast(92%);
             padding: .7em;
+        }
+    }
+
+}
+
+.back-btn {
+    position: absolute;
+    top: 80%;
+    left: 62%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 1em;
+    text-decoration: none;
+    @extend %roboto-reg;
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: $white-1;
+    border: .2px solid $white-1;
+    padding-inline: 1.2em;
+    padding-block: .7em;
+
+    img {
+        width: 1.2em;
+        filter: invert(94%) sepia(0%) saturate(30%) hue-rotate(228deg) brightness(89%) contrast(92%);
+    }
+
+    &:hover {
+        color: $yellow-1;
+        border: .2px solid $yellow-1;
+        transition: color 300ms , border 300ms;
+
+        img {
+            filter: invert(94%) sepia(38%) saturate(3800%) hue-rotate(353deg) brightness(80%) contrast(110%);
         }
     }
 }
