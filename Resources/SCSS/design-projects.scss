@@ -25,16 +25,22 @@ main {
     .project-container {
         display: flex;
         flex-direction: column;
+        margin-block: 5%;
 
         .title {
             @extend %center;
-            max-width: 60%;
             @extend %raleway-reg;
-            font-size: 2rem;
-            color: $white-1;        
+            max-width: 60%;
+            font-size: 2.5rem;
+            color: $white-1;
 
-            span {
-                @extend %raleway-semib;
+            h2 {
+                width: 100%;
+                font-weight: 400;
+
+                span {
+                    @extend %raleway-semib;
+                }
             }
         }
 
@@ -43,7 +49,7 @@ main {
             width: 100%;
             max-width: 28rem;
             @extend %overflow;
-            margin-block: 5%;
+            margin-block: 2%;
 
             .mySwiper {
                 @extend %center;
@@ -85,9 +91,14 @@ main {
             }
         }
 
+        .project2 {
+            max-width: 60rem;
+        }
+
         .info {
             @extend %center;
-            width: 60%;
+            justify-self: center;
+            width: 50%;
             margin-bottom: 2%;
             display: flex;
             justify-content: space-between;
