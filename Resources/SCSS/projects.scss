@@ -31,32 +31,17 @@ main {
 
         a {
             width: 100%;
-            display: flex;
-            flex-direction: column;
             text-decoration: none;
             color: transparent;
 
             img {
                 width: 100%;
-                filter: saturate(50%);
+                filter: saturate(2.2%);
             }
-
-            h2 {
-                color: $yellow-1;
-                @extend %roboto-reg;
-                text-align: center;
-                font-size: 2.7rem;
-                padding: .5rem;
-                text-transform: uppercase;
-            }
-        }
-
-        .dev {
-            flex-direction: column-reverse;
         }
 
         &:hover {
-            transform: scale(1.03);
+            transform: scale(1.05);
             transition: transform 1500ms;
             z-index: 5;
 
