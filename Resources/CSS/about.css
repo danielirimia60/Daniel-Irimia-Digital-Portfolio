@@ -5,186 +5,135 @@
   scroll-behavior: smooth;
 }
 
-footer, footer .footer-content, header .navigation-container, header, main {
+main, header, header .navigation-container, footer .footer-content, footer {
   margin: 0 auto;
 }
 
-footer, main .skills p {
-  font-family: 'Raleway', sans-serif;
+footer {
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
 }
 
 header .navigation-container .navigation-links .link a {
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
   font-weight: 600;
 }
 
-main {
-  font-family: 'Roboto', sans-serif;
+main .skills p, main {
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
 }
 
 footer {
   text-transform: uppercase;
   color: #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
-
 footer a {
   color: inherit;
   text-decoration: none;
 }
-
 footer a:hover {
   color: #D4CC00;
 }
-
 footer .footer-content {
   border-top: 1px solid #FFFFFF;
   border-bottom: 1px solid #FFFFFF;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   gap: 3em;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-top: 1.5em;
   padding-bottom: 1.5em;
 }
-
 footer .footer-content .left-column {
   width: 15%;
   min-width: 23ch;
   line-height: 1.75;
 }
-
 footer .footer-content .left-column span {
   font-size: 1.22rem;
   font-weight: 100;
 }
-
 footer .footer-content .middle-column,
 footer .footer-content .right-column {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: .75em;
+  flex-direction: column;
+  gap: 0.75em;
 }
-
 footer .footer-logo {
   margin: 1.5% auto 1%;
 }
 
 header .navigation-container {
-  -ms-grid-row: 1;
-  -ms-grid-column: 1;
-  grid-area: 1 / 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  grid-area: 1/1;
   display: flex;
   justify-self: center;
   width: 90%;
-  padding-top: .7em;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
+  padding-top: 0.7em;
   height: fit-content;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   position: relative;
   z-index: 2;
 }
-
 header .navigation-container .logo-container {
   width: 6em;
 }
-
 header .navigation-container .logo-container img {
   width: 100%;
 }
-
 header .navigation-container nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding-top: 3em;
   width: 90%;
   position: relative;
 }
-
 header .navigation-container .navigation-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   list-style: none;
 }
-
 header .navigation-container .navigation-links .link a {
   text-decoration: none;
-  padding: .7rem;
+  padding: 0.7rem;
   color: #FFFFFF;
   font-size: 1.2rem;
 }
-
 header .navigation-container .navigation-links .link a:hover {
   color: #D4CC00;
 }
-
 header .navigation-container .social-media {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 header .navigation-container .social-media img {
   aspect-ratio: 1;
   width: 2em;
-  padding: .7em;
-  -webkit-filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
-          filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
+  padding: 0.7em;
+  filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
 }
-
 header .navigation-container .social-media img:hover {
-  -webkit-filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
-          filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
-  -webkit-transform: scale(0.95);
-          transform: scale(0.95);
+  filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
+  transform: scale(0.95);
 }
 
 html body::-webkit-scrollbar {
   width: 8px;
 }
-
 html body::-webkit-scrollbar-track {
   border-radius: 20px;
 }
-
 html body::-webkit-scrollbar-thumb {
   background-color: #D4CC00;
   border-radius: 20px;
 }
 
-main .intro, main .outro, main .section1 p, main .section3 p, main .section2 p {
+main .content .text {
   width: 60ch;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  text-indent: .5rem;
+  align-self: center;
+  text-indent: 0.5rem;
   padding: 1em;
+  line-height: 1.2;
+  letter-spacing: 0.03rem;
 }
 
 header {
@@ -192,96 +141,80 @@ header {
 }
 
 main {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   color: #CFCFCF;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   line-height: 1.2;
-  letter-spacing: .03rem;
+  letter-spacing: 0.03rem;
 }
-
-main h1 {
-  font-size: 5rem;
-  text-align: center;
-  padding: 2rem;
-}
-
-main .section1, main .section3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
+main .top {
   display: flex;
+  flex-direction: column;
   gap: 2em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   margin-block: 5%;
+  margin-right: 4%;
 }
-
-main .section1 img, main .section3 img {
-  width: 30%;
+main .top h1 {
+  font-size: 10rem;
 }
-
-main .section2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
+main .top .update {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-size: 1.1rem;
+  font-weight: 100;
+  opacity: 0.95;
+}
+main .content {
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-block: 5%;
+  justify-content: center;
+  gap: 1em;
 }
-
-main .section2 img {
-  width: 40%;
+main .content img {
+  width: 15%;
+  height: 15%;
+  border-radius: 10%;
 }
-
+main .content .text {
+  width: 20%;
+  align-self: start;
+}
+main .content .text p {
+  font-size: 1.5rem;
+  padding-block: 1em;
+  font-weight: 300;
+}
+main .content .text p span {
+  opacity: 0.7;
+}
+main .content .text .intro {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-block-start: 0;
+}
 main .skills {
-  margin-right: 10%;
-  padding-bottom: 3em;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  margin-left: 15%;
+  margin-block: 3em;
+  align-self: center;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   text-decoration: none;
+  border: 0.01em solid #FFFFFF;
+  padding-block: 1em;
+  padding-inline: 10em;
 }
-
 main .skills p {
+  font-weight: 200;
   color: #FFFFFF;
+  font-size: 2.5rem;
+  text-transform: uppercase;
 }
-
-main .skills img {
-  margin-top: .2em;
-  width: .8em;
-  -webkit-filter: invert(100%) sepia(3%) saturate(1846%) hue-rotate(249deg) brightness(104%) contrast(102%);
-          filter: invert(100%) sepia(3%) saturate(1846%) hue-rotate(249deg) brightness(104%) contrast(102%);
+main .skills:hover {
+  border: 0.01em solid #D4CC00;
 }
-
 main .skills:hover p {
   color: #D4CC00;
-  text-decoration: underline;
 }
 
-main .skills:hover img {
-  -webkit-filter: invert(72%) sepia(32%) saturate(1370%) hue-rotate(14deg) brightness(101%) contrast(100%);
-          filter: invert(72%) sepia(32%) saturate(1370%) hue-rotate(14deg) brightness(101%) contrast(100%);
-}
 /*# sourceMappingURL=about.css.map */
