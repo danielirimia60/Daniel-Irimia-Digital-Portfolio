@@ -25,15 +25,17 @@ main {
     .project-container {
         display: flex;
         flex-direction: column;
+        margin-block: 5%;
 
         .title {
             @extend %center;
             max-width: 60%;
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: $white-1;        
 
             h2 {
                 @extend %raleway-reg;
+                width: 100%
             }
 
             span {
@@ -45,8 +47,7 @@ main {
             @extend %center;
             width: 100%;
             @extend %overflow;
-            margin-top: 5%;
-            margin-bottom: 2%;
+            margin-block: 3%;
 
             .mySwiper {
                 @extend %center;
@@ -67,7 +68,6 @@ main {
                         @extend %center;
                         display: block;
                         object-fit: cover;
-                        height: 100%;
                         width: 60%;
                     }
                 }
