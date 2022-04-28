@@ -91,7 +91,8 @@ main {
     @extend %center;
     color: $light-grey;
     position: relative;
-    height: 480vh;
+    display: flex;
+    flex-direction: column;
 
     span {
         color: $yellow-2;
@@ -102,33 +103,27 @@ main {
         font-size: 9rem;
         max-width: 70%;
         @extend %center;
-        margin-top: 10%;
+        margin-block: 10%;
     }
 
     .intro-content1,
     .intro-content2 {
         font-size: 2.25rem;
         @extend %raleway-reg;
-        width: 40%;
-        
+        width: 40%;  
+        margin: 5%;
+        margin-inline: 15%;
     }
-    .intro-content1 {
-        position: absolute;
-        right: 10px;
-        top: 90rem;
-    }
+
     .intro-content2 {
-        position: absolute;
-        left: 20px;
-        top: 140rem;
+        align-self: flex-end;
     }
     .outro-content {
         font-size: 2.25rem;
-        position: absolute;
-        right: 10px;
-        top: 190rem;
         @extend %raleway-reg;
         padding: .2rem;
+        align-self: center;
+        margin: 5%;
 
         a {
             text-decoration: none;
