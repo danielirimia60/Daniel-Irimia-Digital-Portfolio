@@ -123,11 +123,160 @@
         @extend %center;
 
         .logo-container {
-            width: 6em;
-            
-            img {
-                width: 100%;
+            width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    animation: fadeIn 2.5s ease-in-out forwards;
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(-100%);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    svg .down {
+        animation: fadeUp 2.5s ease-in-out;
+
+        @keyframes fadeUp {
+            0% {
+                transform: translateY(25%) scale(1.1);
             }
+            60% {
+                transform: translateY(25%) scale(1.1);
+            }
+            100% {
+                transform: translateY(0%) scale(1);
+            }
+        }
+    }
+
+    svg .one {
+        animation: 
+            colorIn 200ms ease 2.5s,
+            fadeDown 2.5s ease-in-out;
+    }
+
+    svg .two {
+        animation: 
+            colorIn 200ms ease 2.7s,
+            fadeDown 2.5s ease-in-out;
+    }
+
+    svg .three {
+        animation: 
+            colorIn 200ms ease 2.9s,
+            fadeDown 2.5s ease-in-out;
+    }
+
+    svg .four {
+        animation: 
+            colorIn 200ms ease 3.1s,
+            fadeDown 2.5s ease-in-out;
+    }
+
+    svg .five {
+        animation: 
+            colorIn 200ms ease 3.3s,
+            fadeDown 2.5s ease-in-out;
+    }
+
+    svg .six {
+        animation: 
+            colorIn 200ms ease 3.5s,
+            fadeDown 2.5s ease-in-out;
+    }
+
+    svg .seven {
+        animation: 
+            colorIn 200ms ease 3.7s,
+            fadeDown 2.5s ease-in-out;
+    }
+
+    svg .eight {
+        animation: 
+            colorIn 200ms ease 3.9s,
+            fadeDown 2.5s ease-in-out;
+    }
+
+    svg .nine {
+        animation: 
+            colorIn 200ms ease 4.1s,
+            fadeDown 2.5s ease-in-out;
+    }
+
+    @keyframes fadeDown {
+        0% {
+            opacity: 0;
+            transform: translateY(-30%);
+        }
+        65% {
+            opacity: 0;
+            transform: translateY(-30%);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0%);
+        }
+    }
+
+    @keyframes colorIn {
+        0% {
+            fill: initial;
+        }
+        50% {
+            fill: #D4CC00;
+        }
+        100% {
+            fill: initial;
+        }
+    }
+}
+
+svg {
+    width: 100%;
+    transition: 2s ease-in-out;
+
+    .d-big {
+        transition: 900ms ease;
+    }
+    .i-big {
+        transition: 900ms ease;
+    }
+
+    .down {
+        transition: 2s ease-in-out;
+    }
+    .up {
+        transition: 2s ease-in-out;
+    }
+
+    &:hover {
+        transform: scale(1.1);
+
+        .d-big {
+            fill: #F8F8F8;
+        }
+        .i-big {
+            fill: #D4CC00;
+        }
+
+        .down {
+            transform: translateY(25%);
+        }
+
+        .up {
+            opacity: 0;
+            transform: translateY(-25%) scale(.9);
+        }
+    }
         }
 
         nav {
