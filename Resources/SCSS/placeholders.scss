@@ -51,7 +51,7 @@
 %gradient-text {
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 8rem;
+    font-size: 15rem;
 }
 
 // Footer styles
@@ -66,6 +66,7 @@
     a {
         color: inherit;
         text-decoration: none;
+        transition: 300ms ease;
 
         &:hover {
             color: $yellow-1;
@@ -104,6 +105,19 @@
 
     .footer-logo {
         margin: 1.5% auto 1%;
+
+        img {
+            width: 100%;
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .footer-content {
+            gap: 1.5em;
+            width: 95%;
+        }
+        .footer-logo {
+            width: 8em;
+        }
     }
 }
 
@@ -123,160 +137,167 @@
         @extend %center;
 
         .logo-container {
-            width: 50%;
-    height: 50%;
-    display: flex;
-    justify-content: center;
-    overflow: hidden;
+            width: 15em;
+            height: 15em;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
 
-    animation: fadeIn 2.5s ease-in-out forwards;
+            animation: fadeIn 2.5s ease-in-out forwards;
 
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(-100%);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0%);
-        }
-    }
-
-    svg .down {
-        animation: fadeUp 2.5s ease-in-out;
-
-        @keyframes fadeUp {
-            0% {
-                transform: translateY(25%) scale(1.1);
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(-100%);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
             }
-            60% {
-                transform: translateY(25%) scale(1.1);
+
+            svg .down {
+                animation: fadeUp 2.5s ease-in-out;
+
+                @keyframes fadeUp {
+                    0% {
+                        transform: translateY(25%) scale(1.1);
+                    }
+                    60% {
+                        transform: translateY(25%) scale(1.1);
+                    }
+                    100% {
+                        transform: translateY(0%) scale(1);
+                    }
+                }
             }
-            100% {
-                transform: translateY(0%) scale(1);
+
+            svg .one {
+                animation: 
+                    colorIn 200ms ease 2.5s,
+                    fadeDown 2.5s ease-in-out;
             }
+
+            svg .two {
+                animation: 
+                    colorIn 200ms ease 2.7s,
+                    fadeDown 2.5s ease-in-out;
+            }
+
+            svg .three {
+                animation: 
+                    colorIn 200ms ease 2.9s,
+                    fadeDown 2.5s ease-in-out;
+            }
+
+            svg .four {
+                animation: 
+                    colorIn 200ms ease 3.1s,
+                    fadeDown 2.5s ease-in-out;
+            }
+
+            svg .five {
+                animation: 
+                    colorIn 200ms ease 3.3s,
+                    fadeDown 2.5s ease-in-out;
+            }
+
+            svg .six {
+                animation: 
+                    colorIn 200ms ease 3.5s,
+                    fadeDown 2.5s ease-in-out;
+            }
+
+            svg .seven {
+                animation: 
+                    colorIn 200ms ease 3.7s,
+                    fadeDown 2.5s ease-in-out;
+            }
+
+            svg .eight {
+                animation: 
+                    colorIn 200ms ease 3.9s,
+                    fadeDown 2.5s ease-in-out;
+            }
+
+            svg .nine {
+                animation: 
+                    colorIn 200ms ease 4.1s,
+                    fadeDown 2.5s ease-in-out;
+            }
+
+            @keyframes fadeDown {
+                0% {
+                    opacity: 0;
+                    transform: translateY(-30%);
+                }
+                65% {
+                    opacity: 0;
+                    transform: translateY(-30%);
+                }
+                100% {
+                    opacity: 1;
+                    transform: translateY(0%);
+                }
+            }
+
+            @keyframes colorIn {
+                0% {
+                fill: initial;
+                }
+                50% {
+                    fill: #D4CC00;
+                }
+                100% {
+                    fill: initial;
+                }
+            }
+
+            svg {
+                width: 100%;
+                transition: 2s ease-in-out;
+            
+                .d-big {
+                    transition: 900ms ease;
+                }
+                .i-big {
+                    transition: 900ms ease;
+                }
+            
+                .down {
+                    transition: 2s ease-in-out;
+                }
+                .up {
+                    transition: 2s ease-in-out;
+                }
+            
+                &:hover {
+                    transform: scale(1.1);
+            
+                    .d-big {
+                        fill: #F8F8F8;
+                    }
+                    .i-big {
+                        fill: #D4CC00;
+                    }
+            
+                    .down {
+                        transform: translateY(25%);
+                    }
+            
+                    .up {
+                        opacity: 0;
+                        transform: translateY(-25%) scale(.9);
+                    }
+                }
+             }
         }
-    }
 
-    svg .one {
-        animation: 
-            colorIn 200ms ease 2.5s,
-            fadeDown 2.5s ease-in-out;
-    }
-
-    svg .two {
-        animation: 
-            colorIn 200ms ease 2.7s,
-            fadeDown 2.5s ease-in-out;
-    }
-
-    svg .three {
-        animation: 
-            colorIn 200ms ease 2.9s,
-            fadeDown 2.5s ease-in-out;
-    }
-
-    svg .four {
-        animation: 
-            colorIn 200ms ease 3.1s,
-            fadeDown 2.5s ease-in-out;
-    }
-
-    svg .five {
-        animation: 
-            colorIn 200ms ease 3.3s,
-            fadeDown 2.5s ease-in-out;
-    }
-
-    svg .six {
-        animation: 
-            colorIn 200ms ease 3.5s,
-            fadeDown 2.5s ease-in-out;
-    }
-
-    svg .seven {
-        animation: 
-            colorIn 200ms ease 3.7s,
-            fadeDown 2.5s ease-in-out;
-    }
-
-    svg .eight {
-        animation: 
-            colorIn 200ms ease 3.9s,
-            fadeDown 2.5s ease-in-out;
-    }
-
-    svg .nine {
-        animation: 
-            colorIn 200ms ease 4.1s,
-            fadeDown 2.5s ease-in-out;
-    }
-
-    @keyframes fadeDown {
-        0% {
-            opacity: 0;
-            transform: translateY(-30%);
-        }
-        65% {
-            opacity: 0;
-            transform: translateY(-30%);
-        }
-        100% {
-            opacity: 1;
-            transform: translateY(0%);
-        }
-    }
-
-    @keyframes colorIn {
-        0% {
-            fill: initial;
-        }
-        50% {
-            fill: #D4CC00;
-        }
-        100% {
-            fill: initial;
-        }
-    }
-}
-
-svg {
-    width: 100%;
-    transition: 2s ease-in-out;
-
-    .d-big {
-        transition: 900ms ease;
-    }
-    .i-big {
-        transition: 900ms ease;
-    }
-
-    .down {
-        transition: 2s ease-in-out;
-    }
-    .up {
-        transition: 2s ease-in-out;
-    }
-
-    &:hover {
-        transform: scale(1.1);
-
-        .d-big {
-            fill: #F8F8F8;
-        }
-        .i-big {
-            fill: #D4CC00;
-        }
-
-        .down {
-            transform: translateY(25%);
-        }
-
-        .up {
-            opacity: 0;
-            transform: translateY(-25%) scale(.9);
-        }
-    }
+        @media screen and (max-width: 400px) {
+            .logo-container {
+                width: 10em;
+                height: 10em;
+            }
         }
 
         nav {
@@ -297,6 +318,7 @@ svg {
                 @extend %raleway-semib;
                 color: $white-1;
                 font-size: 1.2rem;
+                transition: 300ms ease;
 
                 &:hover {
                     color: $yellow-1;
@@ -313,12 +335,18 @@ svg {
                 width: 2em;
                 padding: .7em;
                 filter: invert(68%) sepia(72%) saturate(1887%) hue-rotate(18deg) brightness(106%) contrast(103%);
+                transition: 300ms ease-in-out;
 
                 &:hover {
                     filter: invert(78%) sepia(76%) saturate(1393%) hue-rotate(11deg) brightness(89%) contrast(96%);
                     transform: scale(.95);
                 }
             }
+        }
+    }
+    @media screen and (max-width: 400px) {
+        .navigation-container {
+            width: 100%;
         }
     }
 }
