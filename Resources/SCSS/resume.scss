@@ -93,3 +93,33 @@ header {
 footer {
     @extend %footer;
 }
+
+@media screen and (max-width: 1800px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    html {
+        font-size: 10px;
+    }
+}
