@@ -1,6 +1,4 @@
 @import './variables.scss';
-@import './functions.scss';
-@import './mixins.scss';
 @import './placeholders.scss';
 
 * {
@@ -9,6 +7,33 @@
 
 html {
     @extend %custom-scrollbar;
+}
+
+body {
+    background-color: #000000;
+    opacity: 1;
+    background-image:  radial-gradient(#282828 0.8px, transparent 0.8px), radial-gradient(#282828 0.8px, #000000 0.8px);
+    background-size: 32px 32px;
+    background-position: 0 0,16px 16px;
+}
+
+.cover {
+    position: absolute;
+    z-index: 9999;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    animation: lightIn 2s ease-in forwards;
+
+    @keyframes lightIn {
+        from {
+            opacity: 1;
+        }
+        to {
+            opacity: 0;
+            z-index: -1000;
+        }
+    }
 }
 
 // Setting up the header grid
@@ -54,12 +79,14 @@ header {
             align-self: center;
             width: min-content;
             margin-top: 12%;
+            overflow: hidden;
 
             .title-r1,
             .title-r3,
             .title-r2 {
                 @extend %raleway-bold;
                 @extend %gradient-text;
+
             }
             .title-r1, .title-r3 {
                 background-image: linear-gradient(90deg, $first-yellow, $second-yellow, $third-yellow, $fourth-yellow, $fifth-yellow);
@@ -69,20 +96,108 @@ header {
                 background-image: linear-gradient(90deg, $first-white, $second-white, $third-white, $fourth-white, $fifth-white);
                 margin-left: 2rem;
             }
+
+            .title-r1 {
+                animation: titleIn 5s ease forwards;
+            }
+            .title-r2 {
+                animation: titleIn 5.8s ease forwards;
+            }
+            .title-r3 {
+                animation: titleIn 6.6s ease forwards;
+            }
+
+            @media screen and (max-width: 1500px) {
+                .title-r1,
+                .title-r3,
+                .title-r2 {
+                    font-size: 13.5rem;
+                }
+            }
+            @media screen and (max-width: 1080px) {
+                .title-r1,
+                .title-r3,
+                .title-r2 {
+                    font-size: 11rem;
+                }
+            }
+            @media screen and (max-width: 700px) {
+                .title-r1,
+                .title-r3,
+                .title-r2 {
+                    font-size: 8rem;
+                }
+            }
+            @media screen and (max-width: 540px) {
+                .title-r1,
+                .title-r3,
+                .title-r2 {
+                    font-size: 7.2rem;
+                }
+            }
+
+            @keyframes titleIn {
+                0% {
+                    transform: translateY(-30%);
+                    opacity: 0;
+                }
+                50% {
+                    transform: translateY(-30%);
+                    opacity: 0;
+                }
+                100% {
+                    transform: translateY(0%);
+                    opacity: 1;
+                }
+            }
+        }
+
+        @media screen and (max-width: 1080px) {
+            .title-container {
+                margin-top: 30%;
+            }
+        }
+        @media screen and (max-width: 700px) {
+            .title-container {
+                margin-top: 50%;
+            }
         }
 
         .arrow-down {
             grid-area: 1 / 1;
             aspect-ratio: 1;
-            width: 2em;
-            filter: invert(99%) sepia(99%) saturate(2%) hue-rotate(148deg) brightness(111%) contrast(100%);
+            width: 3em;
+            fill: $white-1;
             position: relative;
             z-index: 2;
             overflow: hidden;
             align-self: flex-end;
             justify-self: center;
             padding-bottom: .5em;
-            opacity: .7;
+            animation: 
+                titleIn 4.6s ease-in-out;
+            path {
+                animation: jump 5s ease 7s infinite;
+
+                @keyframes jump {
+                    0% {
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
+                    20% {
+                        transform: translateY(15%);
+                        opacity: 0.1;
+                    }
+                    60% {
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
+                    100% {
+                        transform: translateY(0%);
+                        opacity: 1;
+                    }
+                }
+            }
         }
     }
 }
@@ -106,6 +221,31 @@ main {
         margin-block: 10%;
     }
 
+    @media screen and (max-width: 400px) {
+        .intro-title {
+            font-size: 6rem;
+        }
+    }
+
+    .text-animation {
+        animation: textFadeIn 3.4s ease;
+
+        @keyframes textFadeIn {
+            0% {
+                opacity: 0;
+                transform: translateX(-10%);
+            }
+            13% {
+                opacity: 0;
+                transform: translateX(-10%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%) translateX(0%);
+            }
+        }
+    }
+
     .intro-content1,
     .intro-content2 {
         font-size: 2.25rem;
@@ -118,6 +258,16 @@ main {
     .intro-content2 {
         align-self: flex-end;
     }
+
+    @media screen and (max-width: 400px) {
+        .intro-content1,
+        .intro-content2 {
+            font-size: 1.8rem;
+            width: 65%;
+            align-self: center;
+        }
+    }
+
     .outro-content {
         font-size: 2.25rem;
         @extend %raleway-reg;
@@ -145,7 +295,44 @@ main {
             margin-right: .5em;
         }
     }
+
+    @media screen and (max-width: 400px) {
+        .outro-content {
+            font-size: 1.8rem;
+            width: 65%;
+        }
+    }
+
 }
 footer {
     @extend %footer;
+}
+@media screen and (max-width: 1800px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    html {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    html {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    html {
+        font-size: 10px;
+    }
 }
