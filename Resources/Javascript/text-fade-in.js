@@ -4,7 +4,7 @@ const observer = new IntersectionObserver(entries => {
             entry.target.classList.add('text-animation');
         }
     });
-});
+}, {threshold: 1});
 
 observer.observe(document.querySelector('.intro-title'));
 observer.observe(document.querySelector('.intro-content1'));
